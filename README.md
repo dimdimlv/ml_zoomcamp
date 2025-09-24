@@ -11,24 +11,47 @@ hw_01/
 ```
 
 ## Dataset
-`car_fuel_efficiency.csv` appears to contain automobile characteristics and corresponding fuel efficiency (MPG). The notebook performs basic EDA and model preparation (adjust as needed — feel free to expand this section after pushing).
+`car_fuel_efficiency.csv` appears to contain automobile characteristics and corresponding fuel efficiency (MPG). The notebook performs basic EDA and model preparation 
 
 ## Getting Started
 
-### Prerequisites
-- Python 3.9+ (any recent version should work)
-- (Optional) Create and activate a virtual environment:
+### Anaconda and Conda
+
+The easiest way to set up the environment is to use [Anaconda](https://www.anaconda.com/products/individual) or
+[Miniconda](https://docs.conda.io/en/latest/miniconda.html).
+
+Anaconda comes with everything we need (and much more). 
+Miniconda is a smaller version of Anaconda that contains only Python. 
+
+Follow the instructions on page for installing the correct package for your system.
+The site will automatically detect your operating system and suggest the correct package.
+
+* [Anaconda](https://www.anaconda.com/products/individual)
+* [Miniconda](https://docs.conda.io/en/latest/miniconda.html#latest-miniconda-installer-links)
+
+Anaconda is recommended.
+
+
+### (Optional) Create environment for course
+
+It is a good idea to set up a dedicated environment for the course 
+
+In your terminal, run this command to create the environment
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate  # macOS/Linux
-# On Windows: .venv\\Scripts\\activate
+conda create -n ml-zoomcamp python=3.11
 ```
 
-### Install common packages (if you later add code that needs them)
-If you add model training code, you will likely need packages such as:
+Activate it:
+
 ```bash
-pip install pandas numpy scikit-learn jupyter matplotlib seaborn
+conda activate ml-zoomcamp
+```
+
+Installing libraries
+
+```bash
+conda install numpy pandas scikit-learn seaborn jupyter
 ```
 
 ### Open the Notebook
@@ -36,34 +59,3 @@ pip install pandas numpy scikit-learn jupyter matplotlib seaborn
 jupyter notebook hw_01/hw_01.ipynb
 ```
 (or use VS Code / PyCharm built-in notebook support.)
-
-## How to Reproduce
-1. Clone the repository after you push it to GitHub:
-   ```bash
-git clone https://github.com/<your-username>/<repo-name>.git
-cd <repo-name>
-   ```
-2. Create a virtual environment (optional but recommended).
-3. Open the notebook and execute cells in order.
-
-## Git / GitHub Workflow
-Typical flow once this repo is on GitHub:
-```bash
-git pull origin main            # Update local
-# ... make changes ...
-git add .                        # Stage changes
-git commit -m "Describe changes"
-git push origin main             # Push
-```
-
-## Next Steps / Ideas
-- Add a lightweight baseline regression model (e.g., LinearRegression) with train/validation split.
-- Add a `requirements.txt` once dependencies stabilize.
-- Include a brief EDA summary in the README.
-- Add Makefile or simple script to reproduce preprocessing steps.
-
-## License
-Add a license of your choice (e.g., MIT) if you plan to share or expand this repository.
-
----
-Feel free to adjust this README after the initial push.
