@@ -29,3 +29,6 @@ dist/
 .idea/
 .vscode/
 *.swp
+
+/hw_08/data
+
